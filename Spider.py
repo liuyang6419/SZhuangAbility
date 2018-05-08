@@ -10,8 +10,8 @@ def fetch_pictures(url):
     r = re.compile('<img class="BDE_Image" src="(.*?)"')
     picture_url_list = r.findall(html_content.decode('utf-8'))
 
-    os.mkdir('longzhu')
-    os.chdir(os.path.join(os.getcwd(), 'longzhu'))
+    # os.mkdir('longzhu')
+    os.chdir(os.path.join(os.getcwd(), ''))
     for i in range(len(picture_url_list)):
         picture_name = str(i) + '.jpg'
         try:
