@@ -21,9 +21,9 @@ def fetch_pictures(url):
 
 if __name__ == '__main__':
     global count
-    count = 10949
-    for i in range(7, 9):
+    count = 11412
+    for i in range(1, 7):
         print("Downloading page " + str(i))
         print("Preparing for the Image " + str(count + 1))
-        fetch_pictures("https://tieba.baidu.com/p/4480274467?pn=" + str(i))
+        fetch_pictures("https://tieba.baidu.com/p/5685636816?pn=" + str(i))
     print("Preparing for the Image " + str(count + 1))    
