@@ -4,21 +4,21 @@ import os
 all = 13547
 count = 0
 failed_count = 0
-outfile = 'resized_images/'
+outfile = 'dataset/'
 if not (os.path.exists(outfile)):
     os.mkdir(outfile)
 infile = 'images/'
 for i in range(0, all):
     try:
         img = Image.open(infile+str(i)+'.jpg')
-        out = img.resize((300, 300))
-        out.save(outfile+str(count)+'.jpg')
+        # out = img.resize((300, 300))
+        img.save(outfile+str(count)+'.jpg')
         count = count + 1
     except IOError:
         count -= 1
         failed_count += 1
         print('Failed in resizing Image ' + str(i))
-        print('Total : 'str(failed_count))
+        print('Total : ' + str(failed_count))
         continue
     
 # infile = '/images'
