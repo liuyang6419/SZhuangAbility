@@ -1,0 +1,22 @@
+{# templates/index.html #}
+
+{% extends "base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}SZhuangAbility{% endblock %}
+
+{% block page_content %}
+
+<div class="top">
+    {{ wtf.quick_form(form) }}
+</div>
+ 
+<div class="bottom">
+    {% if result_list %}
+    <img src="../static/images/{{ result_list[0] }}.jpg" />
+    {% else %}
+    {% endif %}
+</div>
+
+{% endblock %}
